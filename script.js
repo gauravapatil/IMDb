@@ -32,7 +32,7 @@ const loading= (isLoading)=>
 
 
 async function fetchMovies() {
-    let response=await fetch(`http://www.omdbapi.com/?s=${searchQuery}&apikey=eea945ad`);
+    let response=await fetch(`https://www.omdbapi.com/?s=${searchQuery}&apikey=eea945ad`);
     let data=await response.json();
     console.log(data);
     
@@ -79,7 +79,7 @@ async function fetchMovies() {
 
             let id=res.Search[i].imdbID;
             console.log(id);
-            let response=await fetch(`http://www.omdbapi.com/?i=${id}&apikey=eea945ad`);
+            let response=await fetch(`https://www.omdbapi.com/?i=${id}&apikey=eea945ad`);
              let data=await response.json();
              console.log(data);
              
